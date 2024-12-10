@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "runtimeExecutable": "C:\\Path\\to\\chrome.exe", // Thay bằng đường dẫn Chrome của bạn,
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
+}

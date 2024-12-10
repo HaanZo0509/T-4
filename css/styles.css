@@ -1,0 +1,311 @@
+/* Reset một số mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Font và màu sắc chủ đạo */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 0;
+}
+
+/* Header */
+header {
+    background: #4CAF50;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+/* Sections */
+section {
+    padding: 60px 0;
+}
+
+/* About Us */
+#about h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+#about p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1em;
+}
+
+/* Team Members */
+#team h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.team-member {
+    background: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.team-member h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #4CAF50;
+}
+
+.team-member p {
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+/* Achievements */
+#achievements h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+.achievements-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.achievement {
+    background: #f9f9f9;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    width: 250px;
+    transition: transform 0.3s ease;
+}
+
+.achievement:hover {
+    transform: scale(1.05);
+}
+
+.achievement i {
+    font-size: 3em;
+    color: #FFD700;
+    margin-bottom: 15px;
+}
+
+.achievement h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #4CAF50;
+}
+
+.achievement p {
+    font-size: 1em;
+}
+
+/* Contact */
+#contact h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+}
+
+form input, form textarea {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+form button {
+    padding: 15px;
+    border: none;
+    background: #4CAF50;
+    color: #fff;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: #45a049;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    .achievement {
+        width: 100%;
+    }
+}
+/* Playful Cursor */
+.cursor {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6a5acd, #00ced1);
+    position: absolute;
+    pointer-events: none;
+    z-index: 10000;
+    transition: transform 0.1s ease, opacity 0.2s ease;
+    animation: cursor-scale 1s infinite alternate;
+    box-shadow: 0 0 10px rgba(0, 206, 209, 0.7);
+}
+
+/* Animation for cursor scaling */
+@keyframes cursor-scale {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(1.5);
+        opacity: 0.8;
+    }
+}
+
+
+/* Blinking animation */
+@keyframes cursor-blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+/* Background Gradient */
+body {
+    background: linear-gradient(135deg, #5F9EA0, #A9C9FF);
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Section Background Colors */
+header {
+    background: #4682B4; /* Steel Blue */
+    color: #fff;
+}
+
+section {
+    background: #F0F8FF; /* Alice Blue */
+}
+
+footer {
+    background: #708090; /* Slate Gray */
+    color: #fff;
+}
+/* Styling cơ bản cho các phần tử */
+.section {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 1;
+}
+
+/* Thu nhỏ khi phần tử ra khỏi vùng hiển thị chính */
+.section.shrink {
+    transform: scale(0.8); /* Thu nhỏ */
+    opacity: 0.7; /* Làm mờ nhẹ */
+}
+
+.section.grow {
+    transform: scale(1.1); /* Phóng to */
+}
+/* Menu Điều Hướng */
+.navbar {
+    background-color: #333;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #00ced1;
+}
+
